@@ -10,7 +10,7 @@
 
 ### IPC播放器组件整体架构
 
-![UIKit (1)](/Users/yeyibo/Downloads/UIKit (1).png)
+![image](https://github.com/damonyyb/IPCameraDesgin/blob/master/component.png)
 
 如图所示，我们将上面所涉及的需求业务，**划分为4个层级**
 
@@ -222,7 +222,7 @@ graph TD
 
 **播放器流协议层**其实可以合并到播放器编解码渲染层里面，但为什么独立出来，不放在核心编解码层里面，是因为播放器的编解码渲染层，大部分时间是以静态库来实现的，静态库的特点是版本稳定后较少修改，而协议层其实和各个公司的业务相关性非常大，很可能经常修改，所以将这部分拿出来了，如果协议层稳定了，可以再移动到编解码渲染层里面，有些类似稳定的业务会发展成为中台的一部分。
 
-![HTTP (1)](/Users/yeyibo/Downloads/HTTP (1).png)
+![image](https://github.com/damonyyb/IPCameraDesgin/blob/master/player.png)
 
 
 
